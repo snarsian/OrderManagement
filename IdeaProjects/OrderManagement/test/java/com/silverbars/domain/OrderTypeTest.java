@@ -16,4 +16,14 @@ public class OrderTypeTest {
         assertTrue(orderTypes.contains(OrderType.BUY));
         assertTrue(orderTypes.contains(OrderType.SELL));
     }
+
+    @Test
+    public void getSortingOrderForBuyOrderType() {
+        assertEquals("HIGH_PRICE", OrderType.getSortingOrder(OrderType.BUY));
+    }
+
+    @Test
+    public void getSortingOrderForSellOrderType() {
+        assertEquals("LOW_PRICE", OrderType.getSortingOrder(OrderType.SELL));
+    }
 }
